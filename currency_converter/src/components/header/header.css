@@ -1,0 +1,60 @@
+.header{
+    position: absolute;
+    top: 0;
+    width: 100% ;
+    left: 0%;
+    height: 80px;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    height: 80px;
+  }
+  
+  .menu {
+    cursor: pointer;
+    position: relative;
+    font-size: 24px;
+  }
+  
+  .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    background-color: #333;
+    width: 300px;
+    align-items: center;
+    
+  }
+  
+  .dropdown ul {
+    list-style-type: none;
+    padding: 0;
+    
+  }
+  
+  .dropdown ul li {
+    padding: 10px;
+    align-items: center;
+    
+  }
+  
+  .dropdown ul li:hover {
+    background-color: #555;
+  }
+  
+  .menu:hover .dropdown {
+    display: block;
+  }
+  .title{
+    font-size: 24px;
+   
+  }
+  .login-signin button{
+    font-size: 18px;
+   
+  }
