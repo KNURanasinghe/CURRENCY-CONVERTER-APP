@@ -1,48 +1,42 @@
 import React, { useState } from 'react';
+import logo from './logo.svg';
 import './header.css';
 
+const Menu = () => (
+  <>
+    <p><a href="#blog" className='active'>Home</a></p>
+    <p><a href="#usdLkr">USD To LKR</a></p>
+    <p><a href="#converter">Converter</a></p>
+    <p><a href="#FindCurrency">Find Currencies</a></p>
+  </>
+);
 
+const Header = () => {
+  const [clicked, setClicked] = useState(false);
 
-const NavigationBar = () => {
-  const [showMenu, setShowMenu] = useState(false);
-
-
-  const handleMouseEnter = () => {
-    setShowMenu(true);
-  };
-
-  const handleMouseLeave = () => {
-    setShowMenu(false);
+  const handleClick = () => {
+    setClicked(!clicked);
   };
 
   return (
     <div className='header'>
-      <div className="navbar">
-      
-      <div className="logo" onClick={() => console.log('Logo clicked')}>
-        Logo
+      <div className="header_container">
+        <div className="logo">
+          <img src={logo} alt="logo" />
+        </div>
+        <div className={clicked ? "header_nav-links" : "mobile"} id='header_nav-links' >
+          <Menu />
+        </div>
+      </div>  
+      <div className="header__sign">
+        <p>SignIn</p>
+        <button type="button">SignUp</button>
       </div>
-      <div className="title">Currency Converter</div>
-      <div className="menu" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-        Menu
-        {showMenu && (
-          <div className="dropdown">
-            <ul>
-              <li>Item 1</li>
-              <li>Item 2</li>
-              <li>Item 3</li>
-            </ul>
-          </div>
-        )}
+      <div  id="mobile" onClick={handleClick}>
+        <i className={clicked ? "fas fa-times" : "fas fa-bars"}></i>
       </div>
-      <div className="login-signin">
-        <button onClick={() => console.log('Login clicked')}>Login</button>
-        <button onClick={() => console.log('Signin clicked')}>Signin</button>
-      </div>
-     
-    </div>
     </div>
   );
 };
 
-export default NavigationBar;
+export default Header;

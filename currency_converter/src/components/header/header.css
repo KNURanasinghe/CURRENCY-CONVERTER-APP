@@ -1,60 +1,133 @@
 .header{
-    position: absolute;
-    top: 0;
-    width: 100% ;
-    left: 0%;
-    height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1rem;
+  background-color:#1d1d1d ;
 }
-.navbar {
+
+.header_container {
+  flex: 1;
+  display:  flex;
+  justify-content: flex-start;
+  align-items: center; 
+}
+
+.logo{
+  margin-left: 2rem;
+}
+
+.logo img{
+  width: 50px;
+  height: 50px;
+}
+
+#header_nav-links{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-left: 5rem;
+ 
+}
+
+#header_nav-links p a{
+  transition: 0.3s ease-in-out;
+}
+
+#header_nav-links p a:hover{
+  color: aquamarine; 
+} 
+
+#header_nav-links a {
+  position: relative; /* Ensure the ::after pseudo-element is positioned relative to this element */
+}
+
+#header_nav-links a:hover::after,
+#header_nav-links a.active::after  {
+  content: '';
+  width: 40%; /* Ensure the line spans the width of the anchor element */
+  height: 2px;
+  background: aquamarine;
+  position: absolute;
+  bottom: -4px;
+  left: 0; /* Start the line from the left edge of the anchor element */
+  transition: width 0.3s ease; /* Smooth transition for the line width */
+}
+
+#header_nav-links p{
+  margin-left: 4rem;
+}
+
+#header_nav-links p,
+.header__sign p,
+.header__sign button {
+  font-size: 22px;
+  margin-right: 1rem;
+  color: white ;
+}
+
+
+#header_nav-links a{
+  cursor: pointer;
+  text-decoration: none;
+  color: white ;
+}
+
+
+.header__sign{
+  display: flex;
+  align-items: center;
+}
+
+.header__sign p{
+  cursor: pointer;
+}
+ 
+.header__sign button{
+  background-color:  blue ;
+  border: none;
+  outline: none;
+  font-size: 22px;
+  margin-right: 1rem;
+  color: white ;
+  padding: 0.6rem ;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#mobile{
+ display: none;
+}
+#mobile i{
+  color: white ;
+  align-items: center;
+ }
+ @media screen and (max-width:1125px) {
+  #header_nav-links{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #333;
-    color: white;
-    padding: 10px 20px;
-    height: 80px;
-  }
-  
-  .menu {
-    cursor: pointer;
-    position: relative;
-    font-size: 24px;
-  }
-  
-  .dropdown {
-    display: none;
-    position: absolute;
-    top: 100%;
-    background-color: #333;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;   
+    position: fixed ;
+    top: 80px;
+    right: 0;
     width: 300px;
-    align-items: center;
-    
+    height: 20rem;
+    background:#212121 ;
+    box-shadow: 0 40px 60px rgba(0,0,0, 0.1);
+    padding: 40px 0 0 10px;
   }
   
-  .dropdown ul {
-    list-style-type: none;
-    padding: 0;
-    
-  }
-  
-  .dropdown ul li {
-    padding: 10px;
-    align-items: center;
-    
-  }
-  
-  .dropdown ul li:hover {
-    background-color: #555;
-  }
-  
-  .menu:hover .dropdown {
+  #mobile{
     display: block;
-  }
-  .title{
+   }
+   #header_nav-links p{
+    margin-bottom:25px ;
+   }
+   #mobile i{
     font-size: 24px;
-   
-  }
-  .login-signin button{
-    font-size: 18px;
-   
-  }
+    cursor: pointer;
+    margin-left: 2.5rem;
+    right: 5px;
+   }
+}

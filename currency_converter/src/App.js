@@ -9,12 +9,14 @@ import {
 function App() {
   return (
     <div className="App">   
-      <Header/>
+     <div className='gradient__bg'>
+     <Header/>
+     <Blog/>
+     <UsdToLkr/>
       <Converter/>
-      <UsdToLkr/>
-      <Blog/>
       <FindCurrency/>
       <Footer/>
+     </div>
     </div>
   );
 }
