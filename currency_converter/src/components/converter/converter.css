@@ -1,0 +1,78 @@
+.converter-container {
+  margin: auto;
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f8f8f8;
+  align-items: center;
+  justify-content: center;
+  height: 600px;
+  margin-top: 150px;
+}
+.selection{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 55px;
+}
+.selection select ,button{
+  width: 120px;
+}
+.selection button p{
+  margin: 0;
+  align-items: center;
+  size: 30px;
+  font-size: 30px;
+}
+.converter-container h2 {
+  text-align: center;
+  margin-top: 70px;
+}
+
+.converter-container div {
+  margin-bottom: 10px;
+}
+
+.converter-container input {
+  padding: 8px;
+  width: 100px;
+}
+
+.converter-container select {
+  padding: 8px;
+}
+
+.converter-container button {
+  padding: 8px 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.converter-container button:hover {
+  background-color: #45a049;
+}
+
+.converter-container p {
+  margin-top: 10px;
+}
+
+.convert{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+.convert button{
+  font-size: 20px;
+}
+.text p{
+  display: flex;
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
